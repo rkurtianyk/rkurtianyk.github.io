@@ -1,20 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
-    <form action=”mailto:ruslan.kurtianyk@gmail.com”
-    method=”POST”
-    enctype=”multipart/form-data”
-    name=”EmailForm”>
-    Name:<br>
-    <input type=”text” size=”19″ name=”ContactName”><br><br>
-
-    Message:<br> <textarea name=”ContactCommentt” rows=”6″ cols=”20″>
-    </textarea><br><br> <button type=”submit”>Submit</button>> </form>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="media.css" />
+    <link rel="stylesheet" href="food.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <a href="" class="logo"><i class="fas fa-utensils"></i>resto.</a>
+      <nav class="navbar">
+        <a class="active" href="#home">Home</a>
+        <a href="#dishes">Dishes</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#review">Review</a>
+        <a href="#order">Order</a>
+      </nav>
+      <div class="icons">
+        <a href="" id="bars"> <i class="fas fa-bars"></i></a>
+        <a href=""> <i class="fas fa-search" id="search-icon"></i></a>
+        <a href=""> <i class="fas fa-heart"></i></a>
+        <a href=""> <i class="fas fa-shopping-cart"></i></a>
+      </div>
+    </header>
+    <!-- <script>
+      let menu = document.querySelector('#bars');
+      let navbar = document.querySelector('.navbar');
+      menu.onclick = () => {
+        menu.classList.toggle('fa-times');
+        navbar.classList.toggle('open');
+      };
+    </script> -->
+    <script>
+      let menu = document.querySelector('#bars');
+      let navbar = document.querySelector('.navbar');
+      menu.onclick = (event) => {
+          event.preventDefault();
+        menu.classList.toggle('fa-times');
+        navbar.classList.toggle('open');
+      };
+    </script>
+  </body>
 </html>

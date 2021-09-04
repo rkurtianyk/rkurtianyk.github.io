@@ -1,0 +1,23 @@
+.item input:checked ~ .checkbox:after {
+  display: block;
+  transition: all .1s ease-in;
+}
+.item input[type='checkbox']:checked ~ label {
+  text-decoration: line-through;
+  color: hsl(256, 7%, 70%);
+  transition: all .1s ease-in;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ffffff;
+  color: #000000;
+  border-width: 5px;
+  border-color: red;
+  padding: 14px;
+}

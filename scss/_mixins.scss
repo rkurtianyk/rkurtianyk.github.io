@@ -1,0 +1,87 @@
+@use "variables" as *;
+
+@mixin square($size) {
+    width: $size;
+    height: $size;
+}
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin set-geometry ($type, $size) {
+    @if $type == circle {
+        @include square($size);
+        border-radius: 50%;
+    } @else if $type == square {
+        @include square($size);
+    } @else if $size > 150px {
+        @include square($size);
+        background-color: red;
+    } @else {
+        &:after {
+            content: "Wrong parameters";
+        }
+    }
+}
+
+
+@mixin generate-buttons () {
+    $colors: red, green, blue, purple, yellow, pink;
+
+    @each $color in $colors {
+        .btn-#{$color} {
+            background-color: $color;
+            color: #fff;
+        }
+    } 
+}
+
+@mixin generate-image-classes () {
+    $images: "gal-img-1", "gal-img-2", "gal-img-3", "gal-img-4", "gal-img-5";
+
+    @each $image in $images {
+        .image-#{$image} {
+            background-image: url('../images/#{$image}.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+@mixin generate-squares () {
+    $counter: 10;
+
+    @while $counter > 0 {
+        .square-size-#{$counter} {
+            @include square(10px + $counter);
+        }
+
+        $counter: $counter - 1;
+    }
+}
+
+@mixin generate-stripes () {
+    @for $i from 1 through 10 {
+        @if ($i % 2 == 1) {
+            .stripe-#{$i} {
+                background-color: grey;
+            }
+        }
+    }
+}
+
+@mixin set-background($url, $background-color) {
+    @if $url {
+        background-image: url($url);
+        background-repeat: no-repeat;
+        background-origin: initial;
+    }  @else if $background-color {
+        background-color: $background-color;
+    } 
+    @else {
+        background-color: auto;
+    }
+}
+

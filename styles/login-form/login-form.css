@@ -1,0 +1,57 @@
+.login-form {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form__button {
+    position: relative;
+    padding: 5px;
+}
+
+.login-form__button_small {
+    height: 100px;
+}
+
+.login-form__button_large {
+    height: 200px;
+}
+
+
+/* Scalable and Modular arcitecture css */
+/* SMACSS */
+
+/*  Base
+*  body {
+*    background: grey;
+*  }
+*  button {}
+*
+*/
+
+/*  Layout
+* 
+*  .header {
+        height: 100px;
+    }
+*  
+*/
+
+.title-box {
+    margin-top: 20px;
+    width: 50%;
+}
+
+.text-info {
+    color: green;
+}
+
+.text-primary {
+    color: rgb(42, 42, 218);
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

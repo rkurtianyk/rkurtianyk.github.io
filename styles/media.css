@@ -1,0 +1,52 @@
+
+/* 
+@media screen and (min-width: 600px) and (max-width: 768px) and (orientation: landscape) {
+    .my-container {
+        width: 500px;
+        height: 500px;
+    }
+} */
+
+.mobile-message {
+    color: black;
+    font-size: 2rem;
+    display: none;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .mobile-message  {
+        display: block;
+    }
+    .box-container {
+        display: none;
+    }
+    
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .my-container {
+        background-color: pink;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .my-container {
+        background-color: yellow;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio-: 2) {
+    .my-container {
+        background-image: url('');
+    }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    body {
+        display: none;
+    }
+ }
+ 
